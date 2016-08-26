@@ -34,7 +34,7 @@
 						</div>
 						<br/>
 						<span>
-							<a data-ng-if="spell.url" data-ng-href="{{spell.url}}" data-ng-bind="spell.name"></a>
+							<a data-ng-if="spell.url" data-ng-href="{{spell.url}}" data-ng-bind="spell.name" target="_blank"></a>
 						</span>
 						<span data-ng-if="!spell.url" data-ng-bind="spell.name"></span>
 					</li>
@@ -54,7 +54,7 @@
 						</div>
 						<br/>
 						<span>
-							<a data-ng-if="item.url" data-ng-href="{{item.url}}" data-ng-bind="item.name"></a>
+							<a data-ng-if="item.url" data-ng-href="{{item.url}}" data-ng-bind="item.name" target="_blank"></a>
 						</span>
 						<span data-ng-if="!item.url" data-ng-bind="item.name"></span>
 					</li>
