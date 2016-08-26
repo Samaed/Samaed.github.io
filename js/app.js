@@ -73,12 +73,21 @@ app.controller('Controller', function Controller($scope) {
         {
           name: "League of Legends",
           shortName: "lol"
+        },
+        {
+          name: "Public Service Broadcasting",
+          shortName: "psb",
+          url: "https://www.youtube.com/user/PSBHQ"
         }
       ],
       items: [
         {
           name: "W40K Tyrannides",
           shortName: "tyranids"
+        },
+        {
+          name: "Sushis (& All Food)",
+          shortName: "sushis"
         }
       ]
     }
