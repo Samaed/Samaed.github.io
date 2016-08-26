@@ -21,13 +21,18 @@ footer {
 	border-top: 1px solid #666;
 }
 
-a {
+a, a:visited {
 	color: #BBF;
 	text-decoration: none
 }
 
 a:hover {
 	color: #99F;
+	text-decoration: none;
+}
+
+a:active {
+	text-shadow: 1px 1px 1px #333;
 	text-decoration: none;
 }
 
