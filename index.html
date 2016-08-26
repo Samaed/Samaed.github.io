@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="vfill" ng-app="App">
+<html class="vfill" data-ng-app="App">
 <head>
 	<title>Corentin Haidon</title>
 	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
@@ -14,7 +14,7 @@
 	<script src="js/angular.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
-<body class="vfill" ng-controller="Controller">
+<body class="vfill" data-ng-controller="Controller">
 	<div class="vfill">
 		<header class="top">
 			<div class="container">
@@ -28,32 +28,32 @@
 		<div class="middle">
 			<div class="container vfill hcenter vcenter">
 				<ul class="itemlist">
-					<li ng-repeat="spell in currentClass.spells">
+					<li data-ng-repeat="spell in currentClass.spells">
 						<div class="square">
-							<img ng-src="img/spells/{{currentClass.shortName}}/{{spell.shortName}}.png" alt=""/>
+							<img data-ng-src="img/spells/{{currentClass.shortName}}/{{spell.shortName}}.png" alt=""/>
 						</div>
 						<br/>
 						<span>
-							<a ng-if="spell.url" ng-bind="spell.name"></a>
+							<a data-ng-if="spell.url" data-ng-bind="spell.name"></a>
 						</span>
-						<span ng-if="!spell.url" ng-bind="spell.name"></span>
+						<span data-ng-if="!spell.url" data-ng-bind="spell.name"></span>
 					</li>
 				</ul>
 				<div class="disable-select hcenter">
 					<div class="class-image">
-						<img class="shadowed " ng-src="img/{{currentClass.shortName}}.png" alt=""/>
+						<img class="shadowed " data-ng-src="img/{{currentClass.shortName}}.png" alt=""/>
 					</div>
 				</div>
 				<ul class="itemlist">
-					<li ng-repeat="item in currentClass.items">
+					<li data-ng-repeat="item in currentClass.items">
 						<div class="square">
-							<img ng-src="img/items/{{currentClass.shortName}}/{{item.shortName}}.png" alt=""/>
+							<img data-ng-src="img/items/{{currentClass.shortName}}/{{item.shortName}}.png" alt=""/>
 						</div>
 						<br/>
 						<span>
-							<a ng-if="item.url" ng-href="{{item.url}}" ng-bind="item.name"></a>
+							<a data-ng-if="item.url" data-ng-href="{{item.url}}" data-ng-bind="item.name"></a>
 						</span>
-						<span ng-if="!item.url" ng-bind="item.name"></span>
+						<span data-ng-if="!item.url" data-ng-bind="item.name"></span>
 					</li>
 				</ul>
 			</div>
@@ -62,7 +62,7 @@
 			<div class="container">
 				<div class="input-group pull-left">
 					<span class="input-group-addon">Class:</span>
-					<select class="form-control" ng-model="currentClass" ng-options="class.name for class in classes">
+					<select class="form-control" data-ng-model="currentClass" data-ng-options="class.name for class in classes">
 					</select>
 					<span class="input-group-btn">
 						<button class="btn btn-primary">Spells</button>
