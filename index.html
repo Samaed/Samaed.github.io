@@ -2,6 +2,12 @@
 <html class="vfill" ng-app="App">
 <head>
 	<title>Corentin Haidon</title>
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="manifest.json">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -22,33 +28,15 @@
 		<div class="middle">
 			<div class="container vfill hcenter vcenter">
 				<ul class="itemlist">
-					<li>
+					<li ng-repeat="spell in currentClass.spells">
 						<div class="square">
-							<img src="img/angularjs.png" alt="angularjs"/>
+							<img ng-src="img/spells/{{currentClass.shortName}}/{{spell.shortName}}.png" alt=""/>
 						</div>
 						<br/>
-						<span>AngularJS</span>
-					</li>
-					<li>
-						<div class="square">
-							<img src="img/jquery.png" alt="jquery"/>
-						</div>
-						<br/>
-						<span>jQuery</span>
-					</li>
-					<li>
-						<div class="square">
-							<img src="img/html5.png" alt="angularjs"/>
-						</div>
-						<br/>
-						<span>HTML5</span>
-					</li>
-					<li>
-						<div class="square">
-							<img src="img/css3.png" alt="angularjs"/>
-						</div>
-						<br/>
-						<span>CSS3</span>
+						<span>
+							<a ng-if="spell.url === null" ng-bind="spell.name"></a>
+						</span>
+						<span ng-if="speel.url !== null" ng-bind="spell.name"></span>
 					</li>
 				</ul>
 				<div class="disable-select hcenter">
@@ -57,12 +45,12 @@
 					</div>
 				</div>
 				<ul class="itemlist">
-					<li>
+					<li ng-repeat="item in currentClass.items">
 						<div class="square">
-							<img src="img/site.png" alt="corentin.haidon.fr"/>
+							<img ng-src="img/items/{{currentClass.shortName}}/{{item.shortName}}.png" alt=""/>
 						</div>
 						<br/>
-						<span><a href="./index.html">corentin.haidon.fr</a></span>
+						<span><a href="./index.html" ng-bind="item.name"></a></span>
 					</li>
 					<li></li>
 					<li></li>

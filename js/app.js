@@ -5,7 +5,36 @@ app.controller('Controller', function Controller($scope) {
   $scope.classes = [
     {
       name: "Web Wizard",
-      shortName: "wizard"
+      shortName: "wizard",
+      spells: [
+        {
+          name: "AngularJS",
+          shortName: "angular"
+        },
+        {
+          name: "jQuery",
+          shortName: "jquery"
+        },
+        {
+          name: "HTML5",
+          shortName: "html5"
+        },
+        {
+          name: "CSS3",
+          shortName: "css3"
+        },
+        {
+          name: "Bootstrap",
+          shortName: "bootstrap"
+        }
+      ],
+      items: [
+        {
+          name: "corentin.haidon.fr",
+          shortName: "site",
+          url: ""
+        }
+      ]
     },
     {
       name: "Backend Archer",
