@@ -32,7 +32,7 @@ app.controller('Controller', function Controller($scope) {
         {
           name: "corentin.haidon.fr",
           shortName: "site",
-          url: ""
+          url: "index.html"
         }
       ]
     },

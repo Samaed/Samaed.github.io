@@ -34,9 +34,9 @@
 						</div>
 						<br/>
 						<span>
-							<a ng-if="spell.url === null" ng-bind="spell.name"></a>
+							<a ng-if="spell.url" ng-bind="spell.name"></a>
 						</span>
-						<span ng-if="speel.url !== null" ng-bind="spell.name"></span>
+						<span ng-if="!spell.url" ng-bind="spell.name"></span>
 					</li>
 				</ul>
 				<div class="disable-select hcenter">
@@ -50,13 +50,12 @@
 							<img ng-src="img/items/{{currentClass.shortName}}/{{item.shortName}}.png" alt=""/>
 						</div>
 						<br/>
-						<span><a href="./index.html" ng-bind="item.name"></a></span>
+						<span>
+							<a ng-if="item.url" ng-href="{{item.url}}" ng-bind="item.name"></a>
+						</span>
+						<span ng-if="!item.url" ng-bind="item.name"></span>
 					</li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</div>
+				</ul>
 			</div>
 		</div>
 		<footer class="bottom">
