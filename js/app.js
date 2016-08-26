@@ -78,6 +78,10 @@ app.controller('Controller', function Controller($scope) {
           name: "Public Service Broadcasting",
           shortName: "psb",
           url: "https://www.youtube.com/user/PSBHQ"
+        },
+        {
+          name: "Minecraft",
+          shortName: "minecraft"
         }
       ],
       items: [
