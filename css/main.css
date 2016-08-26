@@ -21,6 +21,16 @@ footer {
 	border-top: 1px solid #666;
 }
 
+a {
+	color: #BBF;
+	text-decoration: none
+}
+
+a:hover {
+	color: #99F;
+	text-decoration: none;
+}
+
 .top {
 	top: 0;
 	height: 72px;
