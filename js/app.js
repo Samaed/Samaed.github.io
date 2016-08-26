@@ -39,21 +39,50 @@ app.controller('Controller', function Controller($scope) {
     {
       name: "Backend Archer",
       shortName: "archer"
+    },
+    {
+      name: "Video Game Knight",
+      shortName: "knight",
+      spells: [
+        {
+          name: "UE4",
+          shortName: "ue4",
+          url: "https://www.unrealengine.com"
+        },
+        {
+          name: "Unity",
+          shortName: "unity",
+          url: "https://unity3d.com/"
+        }
+      ],
+      items: [
+        {
+          name: "Anarcube",
+          shortName: "anarcube"
+        },
+        {
+          name: "404",
+          shortName: "404"
+        }
+      ]
+    },
+    {
+      name: "Hobbyist",
+      shortName: "hobbyist",
+      spells: [
+        {
+          name: "League of Legends",
+          shortName: "lol"
+        }
+      ],
+      items: [
+        {
+          name: "W40K Tyrannides",
+          shortName: "tyranids"
+        }
+      ]
     }
   ]
   $scope.currentClass = $scope.classes[0];
-
-  $scope.phones = [
-    {
-      name: 'Nexus S',
-      snippet: 'Fast just got faster with Nexus S.'
-    }, {
-      name: 'Motorola XOOM™ with Wi-Fi',
-      snippet: 'The Next, Next Generation tablet.'
-    }, {
-      name: 'MOTOROLA XOOM™',
-      snippet: 'The Next, Next Generation tablet.'
-    }
-  ];
 
 });

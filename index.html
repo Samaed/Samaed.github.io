@@ -34,14 +34,17 @@
 						</div>
 						<br/>
 						<span>
-							<a data-ng-if="spell.url" data-ng-bind="spell.name"></a>
+							<a data-ng-if="spell.url" data-ng-href="{{spell.url}}" data-ng-bind="spell.name"></a>
 						</span>
 						<span data-ng-if="!spell.url" data-ng-bind="spell.name"></span>
 					</li>
 				</ul>
 				<div class="disable-select hcenter">
-					<div class="class-image">
-						<img class="shadowed " data-ng-src="img/{{currentClass.shortName}}.png" alt=""/>
+					<div class="class-image-container"><a>
+						<img class="class-image-icon shadowed" data-ng-src="img/{{currentClass.shortName}}-icon.png" alt=""/>
+						</a>
+						<img class="class-image shadowed" data-ng-src="img/{{currentClass.shortName}}.png" alt=""/>
+
 					</div>
 				</div>
 				<ul class="itemlist">
