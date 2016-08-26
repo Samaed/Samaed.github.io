@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="vfill" ng-app="App">
+<head>
+	<title>Corentin Haidon</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body class="vfill" ng-controller="Controller">
+	<div class="vfill">
+		<header class="top">
+			<div class="container">
+				<div class="header-console disable-select">
+					<h1>Corentin Haidon</h1>
+					<span class="header-console-cursor">|</span>
+				</div>
+				<div class="pull-right"></div>
+			</div>
+		</header>
+		<div class="middle">
+			<div class="container vfill hcenter vcenter">
+				<ul class="itemlist">
+					<li>
+						<div class="square">
+							<img src="img/angularjs.png" alt="angularjs"/>
+						</div>
+						<br/>
+						<span>AngularJS</span>
+					</li>
+					<li>
+						<div class="square">
+							<img src="img/jquery.png" alt="jquery"/>
+						</div>
+						<br/>
+						<span>jQuery</span>
+					</li>
+					<li>
+						<div class="square">
+							<img src="img/html5.png" alt="angularjs"/>
+						</div>
+						<br/>
+						<span>HTML5</span>
+					</li>
+					<li>
+						<div class="square">
+							<img src="img/css3.png" alt="angularjs"/>
+						</div>
+						<br/>
+						<span>CSS3</span>
+					</li>
+				</ul>
+				<div class="disable-select hcenter">
+					<div class="class-image">
+						<img class="shadowed " ng-src="img/{{currentClass.shortName}}.png" alt=""/>
+					</div>
+				</div>
+				<ul class="itemlist">
+					<li>
+						<div class="square">
+							<img src="img/site.png" alt="corentin.haidon.fr"/>
+						</div>
+						<br/>
+						<span><a href="./index.html">corentin.haidon.fr</a></span>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</div>
+			</div>
+		</div>
+		<footer class="bottom">
+			<div class="container">
+				<div class="input-group pull-left">
+					<span class="input-group-addon">Class:</span>
+					<select class="form-control" ng-model="currentClass" ng-options="class.name for class in classes">
+					</select>
+					<span class="input-group-btn">
+						<button class="btn btn-primary">Spells</button>
+						<button class="btn btn-info">Craft</button>
+					</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- console -->
+	<script src="js/console.js"></script>
+</body>
+</html>
