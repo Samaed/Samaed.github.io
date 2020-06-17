@@ -1,16 +1,18 @@
 html {
-	background-image: url('../img/bg.jpg');
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-    background-position: center; 
 }
 
 body {
-	background: none;
+	height: 100%;
+	width: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: top;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
 }
 
-header {
+/*header {
 	background-color: rgba(128,128,128,.5);
 	border-bottom: 1px solid #555;
 }
@@ -19,7 +21,7 @@ footer {
 	padding-top: 16px;
 	background-color: rgba(64,64,64,.75);
 	border-top: 1px solid #666;
-}
+}*/
 
 a, a:visited {
 	color: #BBF;
@@ -148,6 +150,25 @@ a:active {
 	margin-right: auto;
 }
 
+.circle {
+	display: inline-block;
+	clear: right;
+	padding: 1px;
+	width: 5rem;
+	height: 5rem;
+	background-color: rgba(0,0,0,.75);
+	border-radius: 50%;
+	border: 1px solid rgba(0,0,0,.8);
+}
+
+.circle img {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+}
+
 .shadowed {
     -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
     filter: url(#drop-shadow);
@@ -171,13 +192,13 @@ a:active {
 	cursor: default;
 }
 
-.header-console h1::before {
+/*.header-console h1::before {
 	content: "Character: ";
 	font-size: .7em;
 	cursor: default;
 	color: #eee;
 	text-shadow: 1px 1px 1px #000;
-}
+}*/
 
 .bottom select {
 	width: auto;
@@ -191,10 +212,17 @@ h1 {
 	font-size: 2em;
 }
 
+.character-image img {
+	width: 50%;
+	height: auto;
+	display: inline;
+}
+
 .class-image-container {
 	width: 260px;
 	height: 420px;
 	text-align: left;
+	margin: auto;
 }
 
 .class-image-icon {
@@ -274,4 +302,75 @@ h1 {
 	.header-console h1::before {
 		display: none;
 	}
+}
+
+.container-fluid {
+	margin-top: 1rem;
+}
+
+.container-fluid .row > div {
+	margin-top: 1rem;
+}
+
+#origin-city::before {
+	/*content: "Origin: ";*/
+	cursor: default;
+	color: #bbb;
+}
+
+.card-header {
+	text-transform: uppercase;
+}
+
+p {
+  	font-family: "Times New Roman", Times, serif;
+  	font-style: italic;
+  	margin-top: 1.5rem;
+}
+
+.card-body h5, .card-body h6 {
+	margin-top: 1rem;
+	text-transform: uppercase;
+	border-bottom: 1px solid #666;
+}
+
+.card-body h5 {
+	padding-top: .2rem;
+	border-top: 1px solid #666;
+}
+
+.card-body h6 {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul#origin-talents {
+	width: 75%;
+	margin: auto;
+	padding: 0;
+}
+
+.background-lille {
+	background-image: url("../img/bgs/lille.jpg")
+}
+
+.background-chicoutimi {
+	background-image: url("../img/bgs/chicoutimi.jpg")
+}
+
+.background-rennes {
+	background-image: url("../img/bgs/rennes.jpg")
+}
+
+.background-boisblancs {
+	background-image: url("../img/bgs/boisblancs.jpg")
+}
+
+.background-sherbrooke {
+	background-image: url("../img/bgs/sherbrooke.jpg")
+}
+
+.grayed {
+	opacity: .5;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="vfill" data-ng-app="App">
+<html class="vfill" data-ng-app="app">
 <head>
 	<title>Corentin Haidon</title>
 	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
@@ -8,81 +8,35 @@
 	<link rel="manifest" href="manifest.json">
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="theme-color" content="#ffffff">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="js/angular.min.js"></script>
-	<script src="js/app.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
-<body class="vfill" data-ng-controller="Controller">
-	<div class="vfill">
-		<header class="top">
-			<div class="container">
-				<div class="header-console disable-select">
-					<h1>Corentin Haidon</h1>
-					<span class="header-console-cursor">|</span>
-				</div>
-				<div class="pull-right"></div>
-			</div>
-		</header>
-		<div class="middle">
-			<div class="container vfill hcenter vcenter">
-				<ul class="itemlist">
-					<li data-ng-repeat="spell in currentClass.spells">
-						<div class="square">
-							<img data-ng-src="img/spells/{{currentClass.shortName}}/{{spell.shortName}}.png" alt=""/>
-						</div>
-						<br/>
-						<span>
-							<a data-ng-if="spell.url" data-ng-href="{{spell.url}}" data-ng-bind="spell.name" target="_blank"></a>
-						</span>
-						<span data-ng-if="!spell.url" data-ng-bind="spell.name"></span>
-					</li>
-				</ul>
-				<div class="disable-select hcenter">
-					<div class="class-image-container"><a>
-						<img class="class-image-icon shadowed" data-ng-src="img/{{currentClass.shortName}}-icon.png" alt=""/>
-						</a>
-						<img class="class-image shadowed" data-ng-src="img/{{currentClass.shortName}}.png" alt=""/>
+<body ng-class="'background-' + citiesService.currentCity.shortName" ng-controller="controller">
+	<header-nav></header-nav>
+	<div class="container-fluid" ng-view></div>
 
-					</div>
-				</div>
-				<ul class="itemlist">
-					<li data-ng-repeat="item in currentClass.items">
-						<div class="square">
-							<img data-ng-src="img/items/{{currentClass.shortName}}/{{item.shortName}}.png" alt=""/>
-						</div>
-						<br/>
-						<span>
-							<a data-ng-if="item.url" data-ng-href="{{item.url}}" data-ng-bind="item.name" target="_blank"></a>
-						</span>
-						<span data-ng-if="!item.url" data-ng-bind="item.name"></span>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<footer class="bottom">
-			<div class="container">
-				<div class="input-group pull-left">
-					<span class="input-group-addon">Class</span>
-					<select class="form-control" data-ng-model="currentClass" data-ng-options="class.name for class in classes">
-					</select>
-					<span class="input-group-btn">
-						<button class="btn btn-primary">Spells</button>
-						<button class="btn btn-info">Craft</button>
-					</span>
-				</div>
-			</div>
-		</footer>
-	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="
+	sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
 
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	<!-- console -->
+	<script src="js/app.module.js"></script>
+	<script src="js/app.config.js"></script>
+	<script src="js/avatar.component.js"></script>
+	<script src="js/header-nav.component.js"></script>
+	<script src="js/build-preset.component.js"></script>
+	<script src="js/cities.service.js"></script>
+	<script src="js/talents.service.js"></script>
+	<script src="js/classes.service.js"></script>
 	<script src="js/console.js"></script>
+	<script src="js/origin/origin.module.js"></script>
+	<script src="js/origin/origin.component.js"></script>
 </body>
 </html>
