@@ -8,13 +8,13 @@ angular.
       {
         name: "Lille, France",
         shortName: "lille",
-        description: "You come from a city called Lille, in the north of France, where you grew up and studied until the age of 23.",
+        description: "You come from the city of Lille, in the north of France, where you grew up and studied until 23.",
         talents: ["birth","bsc","msc","promoisen"]
       },
       {
-        name: "Chicoutimi, Québec, CA",
+        name: "Chicoutimi, Québec",
         shortName: "chicoutimi",
-        description: "You went to Chicoutimi, Québec, to finalize your MSc studies and fell in love with the life in \"La Belle Province\".",
+        description: "You went to Chicoutimi, Québec, to finalize your MSc studies and fell in love with \"La Belle Province\".",
         talents: ["maitrise","promouqac"]
       },
       {
@@ -26,13 +26,13 @@ angular.
       {
         name: "Lille, France",
         shortName: "boisblancs",
-        description: "Your love for Lille could only mean you would go back at some point.",
+        description: "Your love for Lille could only mean going back at some point. So you became a back-end developer.",
         talents: []
       },
       {
-        name: "Sherbrooke, Québec, CA",
+        name: "Sherbrooke, Québec",
         shortName: "sherbrooke",
-        description: "Until your true love purchased a ticket to Sherbrooke. Nice to see you again, Québec.",
+        description: "Finally, your true love purchased a ticket to Sherbrooke. Nice to see you again, Québec.",
         talents: ["phd"]
       }
     ];

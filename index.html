@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="vfill" data-ng-app="app">
+<html class="vfill" data-ng-app="app" ng-class="'background-' + citiesService.currentCity.shortName" ng-controller="controller">
 <head>
 	<title>Corentin Haidon</title>
 	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
@@ -8,6 +8,7 @@
 	<link rel="manifest" href="manifest.json">
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="height=device-height,width=474,initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<!-- Latest compiled and minified CSS -->
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
@@ -15,7 +16,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
-<body ng-class="'background-' + citiesService.currentCity.shortName" ng-controller="controller">
+<body>
 	<header-nav></header-nav>
 	<div class="container-fluid" ng-view></div>
 
