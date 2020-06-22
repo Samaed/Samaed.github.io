@@ -4,7 +4,10 @@ angular.
   function config($routeProvider) {
     $routeProvider.when('/origin', {
       template: '<origin></origin>'
-    }).otherwise('/origin');
+    }).when('/preset', {
+      template: '<preset></preset>'
+    }).
+    otherwise('/origin');
   }]).
   controller('controller', function($scope, citiesService) {
     $(function () {

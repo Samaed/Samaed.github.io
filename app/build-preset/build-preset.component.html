@@ -12,6 +12,10 @@
 
 <div class="mt-3"> {{classesService.currentClass.name}} </div>
 
-<ul class="list-inline mt-3">
-	<li class="list-inline-item" ng-repeat="spell in classesService.currentClass.spells"><img class="square" ng-src="img/spells/{{classesService.currentClass.shortName}}/{{spell.shortName}}.png" /></li>
+<ul class="list-inline mt-3 square-ul">
+	<li class="list-inline-item align-middle" ng-repeat="spell in classesService.currentClass.spells"><img class="square" ng-src="img/spells/{{classesService.currentClass.shortName}}/{{spell.shortName}}.png" /></li>
 </ul>
+
+<template id="item">
+	
+</template>

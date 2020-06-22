@@ -1,7 +1,7 @@
 angular.
   module('app').
   service('talentsService', function() {
-    var talents = {
+    var dictionary = {
       "birth": {
         icon: "apple",
         name: "You are born!",
@@ -55,7 +55,7 @@ angular.
     };
 
     this.byName = function(name) {
-      return talents[name];
+      return dictionary[name];
     }
 
     this.tooltip = function(talent) {

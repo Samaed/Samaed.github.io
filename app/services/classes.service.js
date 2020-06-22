@@ -105,7 +105,7 @@ angular.
     };
 
     this.previousClass = function() {
-      this.classIndex = this.incrementClass(this.classIndex, this.classes, 1);
+      this.classIndex = this.incrementClass(this.classIndex, this.classes, -1);
       this.refreshClass();
     };
 

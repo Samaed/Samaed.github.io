@@ -1,7 +1,7 @@
 angular.
   module('origin').
   component('origin', {
-    templateUrl: 'origin.htm',
+    templateUrl: '/app/origin/origin.component.html',
     controller: function($scope, citiesService, talentsService) {
     	$scope.citiesService = citiesService;
     	$scope.talentsService = talentsService;

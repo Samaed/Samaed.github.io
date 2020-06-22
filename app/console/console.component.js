@@ -1,6 +1,7 @@
 angular.
   module('app').
   component('console', {
+    templateUrl: '/app/console/console.component.html',
     controller: function() {
       var captionLength = 0;
       var typeInterval = 50;

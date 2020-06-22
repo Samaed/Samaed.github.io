@@ -46,21 +46,21 @@
 							<span class="text-muted mt-4 float-right">{{citiesService.cityIndex+1}}/{{citiesService.cities.length}}</span>
 						</p>
 
-            <h6 class="d-lg-none mt-5">Talents</h6>
+						<h6 class="d-lg-none mt-5">Talents</h6>
 
-						<ul class="list-inline mt-lg-5">
-							<li class="list-inline-item" ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" title="{{talentsService.tooltip(talent)}}">
+						<ul class="list-inline mt-lg-5 square-ul">
+							<li class="list-inline-item align-middle" ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" title="{{talentsService.tooltip(talent)}}">
 								<img class="square" ng-class="talent.disabled ? 'grayed' : ''" ng-src="img/items/{{talent.icon}}.png" />
 							</li>
 						</ul>
 
-            <div class=" d-none d-lg-block">
-  						<h6>Talents</h6>
+						<div class=" d-none d-lg-block">
+									<h6>Talents</h6>
 
-  						<ul id="origin-talents">
-  							<li ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" title="{{talentsService.tooltip(talent)}}"><span ng-class="talent.disabled ? 'grayed' : ''">{{talent.name}}</span></li>
-  						</ul>
-            </div>
+									<ul id="origin-talents">
+										<li ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" title="{{talentsService.tooltip(talent)}}"><span ng-class="talent.disabled ? 'grayed' : ''">{{talent.name}}</span></li>
+									</ul>
+						</div>
 					</div>
 					<div class="col-6 col-lg-12">
 						<build-preset></build-preset>
