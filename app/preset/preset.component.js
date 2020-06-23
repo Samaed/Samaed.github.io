@@ -95,19 +95,21 @@ angular.
 
             for (const stat in itemsService.equipmentMapping) {
                 const slotClass = '.'+itemsService.equipmentMapping[stat];
+                const selector = '#equipment .slot'+slotClass+':not(:has(*)), #inventory .slot:not(:has(*))';
+
                 $('.'+stat).draggable({
                     revert: 'invalid',
                     revertDuration: 125,
-                    snap: '.slot'+slotClass,
+                    snap: selector,
                     snapMode: 'inner',
                     stack: '#inventory',
                     snapTolerance: 24,
                     scroll: false,
                     start: function() {
-                        $(slotClass+':not(:has(*))').addClass('border border-warning');
+                        $(selector).addClass('border border-warning');
                     },
                     stop: function(ev, ui) {
-                        $(slotClass+'.border.border-warning').removeClass('border border-warning');
+                        $('.slot.border.border-warning').removeClass('border border-warning');
                     }
                 });
             }
