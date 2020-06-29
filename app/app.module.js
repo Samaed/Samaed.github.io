@@ -1,1 +1,1 @@
-angular.module('app', ['ngRoute', 'origin', 'preset']);
+angular.module('app', ['ngRoute', 'pascalprecht.translate', 'origin', 'equipment']);

@@ -1,5 +1,14 @@
+<!--
+Welcome to the source code!
+
+This website is designed to provide an overview of my skills, but is by no mean coded in a state-of-the-art fashion.
+This is more of a side-project for me and for you to enjoy than a technical demonstration of my skills in Angular
+(especially in AngularJS, since Angular.io would be by a large margin preferable).
+
+Have fun with this website and don't hesitate to contact me if you are interested in talking about anything.
+ -->
 <!DOCTYPE html>
-<html class="vfill" data-ng-app="app" ng-class="'background-' + citiesService.currentCity.shortName" ng-controller="controller">
+<html class="vfill" data-ng-app="app" ng-class="'background-' + citiesService.currentCity.name" ng-controller="controller">
 <head>
 	<title>Corentin Haidon</title>
 	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
@@ -38,17 +47,19 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.2/angular-translate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.2/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
 
 	<script src="app/app.module.js"></script>
 	<script src="app/app.config.js"></script>
 	<script src="app/avatar/avatar.component.js"></script>
-	<script src="app/build-preset/build-preset.component.js"></script>
+	<script src="app/class-switcher/class-switcher.component.js"></script>
 	<script src="app/console/console.component.js"></script>
 	<script src="app/header-nav/header-nav.component.js"></script>
 	<script src="app/origin/origin.module.js"></script>
 	<script src="app/origin/origin.component.js"></script>
-	<script src="app/preset/preset.module.js"></script>
-	<script src="app/preset/preset.component.js"></script>
+	<script src="app/equipment/equipment.module.js"></script>
+	<script src="app/equipment/equipment.component.js"></script>
 	<script src="app/services/cities.service.js"></script>
 	<script src="app/services/classes.service.js"></script>
 	<script src="app/services/talents.service.js"></script>

@@ -5,13 +5,13 @@
 	<div class="row">
 		<div class="col text-center">
 			<div class="list-group list-group-horizontal">
-				<a href="#!/origin" class="list-group-item list-group-item-action" ng-class="isActiveLink('/origin')">Origin</a>
-				<span class="w-100" data-toggle="tooltip" data-placement="bottom" title="Locked">
-          <span class="list-group-item list-group-item-action disabled" href="#" class="disabled" disabled>Appearance</span>
-        </span>
-        <a href="#!/preset" class="list-group-item list-group-item-action" ng-class="isActiveLink('/preset')">Preset</a>
-				<a href="#!/talents" class="list-group-item list-group-item-action" ng-class="isActiveLink('/talents')">Talents</a>
-				<a href="#!/tags" class="list-group-item list-group-item-action" ng-class="isActiveLink('/tags')">Tags</a>
+				<a href="#!/origin" class="list-group-item list-group-item-action" ng-class="isActiveLink('/origin')">{{ 'origin' | translate }}</a>
+				<span class="w-100" data-toggle="tooltip" data-placement="bottom" title="{{ 'locked' | translate }}">
+          			<span class="list-group-item list-group-item-action disabled" href="#" class="disabled" disabled>{{ 'appearance' | translate }}</span>
+        		</span>
+        		<a href="#!/equipment" class="list-group-item list-group-item-action" ng-class="isActiveLink('/equipment')">{{ 'equipment' | translate }}</a>
+				<a href="#!/talents" class="list-group-item list-group-item-action" ng-class="isActiveLink('/talents')">{{ 'talents' | translate }}</a>
+				<!-- ADD flags -->
 			</div>
 		</div>
 	</div>

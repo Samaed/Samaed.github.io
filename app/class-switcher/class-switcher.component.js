@@ -1,7 +1,7 @@
 angular.
   module('app').
-  component('buildPreset', {
-    templateUrl: '/app/build-preset/build-preset.component.html',
+  component('classSwitcher', {
+    templateUrl: '/app/class-switcher/class-switcher.component.html',
     controller: function($scope, classesService) {
     	$scope.classesService = classesService;
     }

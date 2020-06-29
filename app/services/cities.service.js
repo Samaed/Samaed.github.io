@@ -6,33 +6,23 @@ angular.
 
     this.cities = [
       {
-        name: "Lille, France",
-        shortName: "lille",
-        description: "You come from the city of Lille, in the north of France, where you grew up and studied until 23.",
+        name: "lille",
         talents: ["birth","bsc","msc","promoisen"]
       },
       {
-        name: "Chicoutimi, Québec",
-        shortName: "chicoutimi",
-        description: "You went to Chicoutimi, Québec, to finalize your MSc studies and fell in love with \"La Belle Province\".",
+        name: "chicoutimi",
         talents: ["maitrise","promouqac"]
       },
       {
-        name: "Rennes, France",
-        shortName: "rennes",
-        description: "Missing your family, you took the plane back to pursue a carrier as software engineer.",
+        name: "rennes",
         talents: []
       },
       {
-        name: "Lille, France",
-        shortName: "boisblancs",
-        description: "Your love for Lille could only mean going back at some point. So you became a back-end developer.",
+        name: "boisblancs",
         talents: []
       },
       {
-        name: "Sherbrooke, Québec",
-        shortName: "sherbrooke",
-        description: "Finally, your true love purchased a ticket to Sherbrooke. Nice to see you again, Québec.",
+        name: "sherbrooke",
         talents: ["phd"]
       }
     ];
