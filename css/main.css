@@ -95,7 +95,7 @@ ul.square-ul li:last-child {
 .header-console h1 {
 	display: inline-block;
 	cursor: text;
-	text-shadow: 1px 1px 1px #999;
+	text-shadow: 1px 1px 1px #666;
 }
 
 .header-console-cursor {
@@ -121,6 +121,7 @@ h1 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -o-user-select: none;
   user-select: none;
 }
 
@@ -163,23 +164,23 @@ ul#origin-talents {
 }
 
 .background-lille {
-	background-image: url("../img/bgs/lille.jpg")
+	background-image: url("../img/backgrounds/lille.jpg")
 }
 
 .background-chicoutimi {
-	background-image: url("../img/bgs/chicoutimi.jpg")
+	background-image: url("../img/backgrounds/chicoutimi.jpg")
 }
 
 .background-rennes {
-	background-image: url("../img/bgs/rennes.jpg")
+	background-image: url("../img/backgrounds/rennes.jpg")
 }
 
 .background-boisblancs {
-	background-image: url("../img/bgs/boisblancs.jpg")
+	background-image: url("../img/backgrounds/boisblancs.jpg")
 }
 
 .background-sherbrooke {
-	background-image: url("../img/bgs/sherbrooke.jpg")
+	background-image: url("../img/backgrounds/sherbrooke.jpg")
 }
 
 .greyed, .grayed {
@@ -223,4 +224,57 @@ ul#origin-talents {
 
 #origin-col {
 	min-height: 700px;
+}
+
+#language > button::after, #socials > button::after {
+	display: none;
+}
+
+#language > button, #socials > button {
+	padding: 0;
+	overflow: hidden;
+}
+
+#language > button {
+  border-radius: 0px 0px 0px .25rem;
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+#socials > button {
+  border-radius: 0px 0px .25rem 0px;
+  border-top-width: 0;
+  border-left-width: 0;
+}
+
+#language .dropdown-menu, #socials .dropdown-menu {
+	min-width: 0;
+	transform: translate3d(0, 34px, 0) !important;
+	padding: 0;
+  overflow: hidden;
+}
+
+#language .dropdown-menu {
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#socials .dropdown-menu {
+  border-left-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#language .dropdown-menu .dropdown-item, #socials .dropdown-menu .dropdown-item {
+	padding: 0;
+  cursor: pointer;
+}
+
+#language img, #socials img {
+	border-radius: 0;
+}
+
+header .list-group-item.disabled {
+	pointer-events: inherit !important;
 }

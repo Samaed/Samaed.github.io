@@ -6,12 +6,13 @@
 		<div class="col text-center">
 			<div class="list-group list-group-horizontal">
 				<a href="#!/origin" class="list-group-item list-group-item-action" ng-class="isActiveLink('/origin')">{{ 'origin' | translate }}</a>
-				<span class="w-100" data-toggle="tooltip" data-placement="bottom" title="{{ 'locked' | translate }}">
-          			<span class="list-group-item list-group-item-action disabled" href="#" class="disabled" disabled>{{ 'appearance' | translate }}</span>
-        		</span>
+				<span class="list-group-item disabled w-100" data-toggle="tooltip" data-placement="bottom" title="{{ 'locked' | translate }}">
+					{{ 'appearance' | translate }}
+				</span>
         		<a href="#!/equipment" class="list-group-item list-group-item-action" ng-class="isActiveLink('/equipment')">{{ 'equipment' | translate }}</a>
-				<a href="#!/talents" class="list-group-item list-group-item-action" ng-class="isActiveLink('/talents')">{{ 'talents' | translate }}</a>
-				<!-- ADD flags -->
+				<span class="list-group-item disabled w-100" data-toggle="tooltip" data-placement="bottom" title="{{ 'hl3' | translate }}">
+					{{ 'achievements' | translate }}
+				</span>
 			</div>
 		</div>
 	</div>

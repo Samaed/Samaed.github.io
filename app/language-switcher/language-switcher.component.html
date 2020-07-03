@@ -1,0 +1,12 @@
+<div id="language" class="dropdown float-right">
+	<button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<img class="square small transparent" ng-src="img/flags/{{$root.lang}}.png"/>
+	</button>
+	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		<span class="dropdown-item" ng-repeat="language in $root.otherLangs">
+			<a ng-click="$root.changeLanguage(language)">
+				<img class="square small transparent" ng-src="img/flags/{{language}}.png"/>
+			</a>
+		</span>
+	</div>
+</div>

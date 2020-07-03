@@ -1,16 +1,17 @@
 {
-	"stat": "Stats",
-	"class": "Class",
-	"locked": "Locked",
-	"inventory": "Inventory",
-	"origin": "Origin",
-	"background": "Background",
-	"appearance": "Appearance",
-	"equipment": "Equipment",
-	"talents": "Talents",
+	"stat": "Statistiques",
+	"class": "Classe",
+	"locked": "Je suis né ainsi.",
+	"hl3": "Coming soon™",
+	"inventory": "Inventaire",
+	"origin": "Origine",
+	"background": "Historique",
+	"appearance": "Apparence",
+	"equipment": "Équipement",
+	"achievements": "Accomplissements",
 	"items": {
 		"sword": {
-			"title": "A Mighty Sword",
+			"title": "Une épée!",
 			"description": "No knight goes out without his sword."
 		},
 		"bow": {

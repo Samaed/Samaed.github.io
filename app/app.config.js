@@ -14,18 +14,30 @@ angular.
         prefix: '/locales/',
         suffix: '.json'
     })
-    .uniformLanguageTag('bcp47')
+    .registerAvailableLanguageKeys(['fr', 'en'], {
+      'en*': 'en',
+      'fr*': 'fr',
+      '*': 'en'
+    })
     .useSanitizeValueStrategy('sanitizeParameters')
     .determinePreferredLanguage()
-    .fallbackLanguage('en-US');
   }]).
   controller('controller', function($window, $scope, $rootScope, $translate, citiesService) {
     $scope.citiesService = citiesService;
 
-    $scope.changeLanguage = function(key) {
-        $rootScope.lang = key;
-        $translate.use(key).then(function(){}, function(){console.error('JSON file is invalid')});
+    $rootScope.changeLanguage = function(key) {
+      $rootScope.lang = key;
+      $rootScope.otherLangs = $translate.getAvailableLanguageKeys().slice(0);
+      $rootScope.otherLangs.splice($rootScope.otherLangs.indexOf($rootScope.lang), 1);
+      $translate.use(key);
+      sessionStorage.setItem('lang', key);
     };
+
+    var sessionStorageLang = sessionStorage.getItem('lang');
+    if (!sessionStorageLang || $translate.getAvailableLanguageKeys().indexOf(sessionStorageLang) == -1)
+      $rootScope.changeLanguage($translate.proposedLanguage());
+    else
+      $rootScope.changeLanguage(sessionStorageLang);
 
     $('body').tooltip({
       selector: '[data-toggle="tooltip"]'

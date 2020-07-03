@@ -1,0 +1,118 @@
+{
+	"stat": "Stats",
+	"class": "Class",
+	"locked": "I was born this way.",
+	"hl3": "Coming soon™",
+	"inventory": "Inventory",
+	"origin": "Origin",
+	"background": "Background",
+	"appearance": "Appearance",
+	"equipment": "Equipment",
+	"achievements": "Achievements",
+	"items": {
+		"sword": {
+			"title": "A Mighty Sword",
+			"description": "No knight goes out without his sword."
+		},
+		"bow": {
+			"title": "A Mighty Bow",
+			"description": "An archer might use one."
+		},
+		"book": {
+			"title": "A Mighty Book",
+			"description": "A wizard's best friend."
+		},
+		"armor": {
+			"title": "A Mighty Armor",
+			"description": "The Mighty!!!!!!!!!"
+		},
+		"cloaks": {
+			"title": "Mighty Cloaks",
+			"description": "The Mighty!!!!!!!!"
+		},
+		"helmets": {
+			"title": "A Mighty Helmet",
+			"description": "The Mighty!!!!!!!"
+		},
+		"shield": {
+			"title": "A Mighty Shield",
+			"description": "The Mighty!!!!!!"
+		},
+		"boots": {
+			"title": "Mighty Boots",
+			"description": "The Mighty!!!!!"
+		},
+		"bracers": {
+			"title": "Mighty Bracers",
+			"description": "The Mighty!!!!"
+		},
+		"pants": {
+			"title": "Mighty Pants",
+			"description": "The Mighty!!!"
+		},
+		"belts": {
+			"title": "A Mighty Belt",
+			"description": "The Mighty!!"
+		},
+		"gloves": {
+			"title": "Some Mighty Gloves",
+			"description": "The Mighty!"
+		}
+	},
+	"stats": {
+		"attack": {
+			"title": "Attack",
+			"description": "ATTACKKKKKK"
+		},
+		"magic": {
+			"title": "Magic",
+			"description": "Magic? For real?"
+		},
+		"armor": {
+			"title": "Armor",
+			"description": "ARMOR."
+		},
+		"cooldown": {
+			"title": "Cooldown",
+			"description": "Never late!"
+		},
+		"range": {
+			"title": "Range",
+			"description": "Look forward"
+		},
+		"movementspd": {
+			"title": "Movement speed",
+			"description": "Evolve fast"
+		}
+	},
+	"classes": {
+		"wizard": "Web Wizard",
+		"archer": "Backend Archer",
+		"knight": "Video Game Knight",
+		"hobbyist": "Hobbyist"
+	},
+	"cities": {
+		"first": "There is no \"before\"",
+		"last": "That's all folks!",
+		"lille": {
+        	"title": "Lille, France",
+			"description": "You come from the city of Lille, in the north of France, where you grew up and studied until 23."
+		},
+		"chicoutimi": {
+        	"title": "Chicoutimi, Québec",
+    		"description": "You went to Chicoutimi, Québec, to finalize your MSc studies and fell in love with \"La Belle Province\"."
+		},
+		"rennes": {
+        	"title": "Rennes, France",
+			"description": "Missing your family, you took the plane back to pursue a carrier as software engineer."
+		},
+		"boisblancs": {
+        	"title": "Lille, France",
+			"description": "Your love for Lille could only mean going back at some point. So you became a back-end developer."
+		},
+		"sherbrooke": {
+        	"title": "Sherbrooke, Québec",
+        	"description": "Finally, your true love purchased a ticket to Sherbrooke. Nice to see you again, Québec."
+		}
+	}
+}
