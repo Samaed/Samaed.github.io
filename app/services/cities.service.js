@@ -1,9 +1,6 @@
 angular.
   module('app').
   service('citiesService', function() {
-    this.cityIndex = 0;
-    this.currentCity = undefined;
-
     this.cities = [
       {
         name: "lille",
@@ -49,8 +46,15 @@ angular.
 
     this.refreshCity = function() {
       this.currentCity = this.cities[this.cityIndex];
+      sessionStorage.setItem('cityIndex', this.cityIndex);
     };
 
+
+    var sessionStorageCityIndex = parseInt(sessionStorage.getItem('cityIndex'));
+    this.cityIndex = isNaN(sessionStorageCityIndex) || sessionStorageCityIndex < 0 || sessionStorageCityIndex >= this.cities.length ?
+      0 : sessionStorageCityIndex;
+
+    this.currentCity = undefined;
     this.refreshCity();
   });
   

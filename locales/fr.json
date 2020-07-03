@@ -86,33 +86,33 @@
 		}
 	},
 	"classes": {
-		"wizard": "Web Wizard",
-		"archer": "Backend Archer",
-		"knight": "Video Game Knight",
+		"wizard": "Sorcier du Web",
+		"archer": "Archer en Backend",
+		"knight": "Chevalier de l'Ordre du Jeu",
 		"hobbyist": "Hobbyist"
 	},
 	"cities": {
-		"first": "There is no \"before\"",
+		"first": "Il n'y a pas d' \"avant\"",
 		"last": "That's all folks!",
 		"lille": {
         	"title": "Lille, France",
-			"description": "You come from the city of Lille, in the north of France, where you grew up and studied until 23."
+			"description": "Vous venez de Lille, dans le nord de la France, où vous avez grandi et étudié jusqu'à vos 23 ans."
 		},
 		"chicoutimi": {
         	"title": "Chicoutimi, Québec",
-    		"description": "You went to Chicoutimi, Québec, to finalize your MSc studies and fell in love with \"La Belle Province\"."
+    		"description": "Vous êtes allé à Chicoutimi, Québec, pour terminer votre Master et êtes tombé amoureux de \"La Belle Province\"."
 		},
 		"rennes": {
         	"title": "Rennes, France",
-			"description": "Missing your family, you took the plane back to pursue a carrier as software engineer."
+			"description": "Votre famille vous manquant, vous avez pris l'avion du retour pour poursuivre une carrière d'ingénieur logiciel en Bretagne."
 		},
 		"boisblancs": {
         	"title": "Lille, France",
-			"description": "Your love for Lille could only mean going back at some point. So you became a back-end developer."
+			"description": "Votre amour pour Lille ne pouvait signifier autre chose qu'y rentrer un jour. Vous êtes donc devenu ingénieur backend."
 		},
 		"sherbrooke": {
         	"title": "Sherbrooke, Québec",
-        	"description": "Finally, your true love purchased a ticket to Sherbrooke. Nice to see you again, Québec."
+        	"description": "Finalement, votre grand amour a entrepris une thèse à Sherbrooke, donc vous vous êtes mis au défi d'en faire de même. Heureux de te retrouver, Québec."
 		}
 	}
 }

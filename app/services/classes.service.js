@@ -1,9 +1,6 @@
 angular.
   module('app').
   service('classesService', function() {
-    this.classIndex = 0;
-    this.currentClass = undefined;
-
     var dictionary = {
       wizard: {
         name: 'wizard',
@@ -49,8 +46,14 @@ angular.
 
     this.refreshClass = function() {
       this.currentClass = this.items[this.classIndex];
+      sessionStorage.setItem('classIndex', this.classIndex);
     };
 
+    var sessionStorageClassIndex = parseInt(sessionStorage.getItem('classIndex'));
+    this.classIndex = isNaN(sessionStorageClassIndex) || sessionStorageClassIndex < 0 || sessionStorageClassIndex >= this.items.length ?
+      0 : sessionStorageClassIndex;
+
+    this.currentClass = undefined;
     this.refreshClass();
   });
   

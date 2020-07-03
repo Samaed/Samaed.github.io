@@ -31,6 +31,8 @@ angular.
       $rootScope.otherLangs.splice($rootScope.otherLangs.indexOf($rootScope.lang), 1);
       $translate.use(key);
       sessionStorage.setItem('lang', key);
+
+      // TODO: Update the tooltip content when changing the language
     };
 
     var sessionStorageLang = sessionStorage.getItem('lang');
