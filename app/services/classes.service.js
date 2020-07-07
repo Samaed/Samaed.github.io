@@ -1,6 +1,6 @@
 angular.
   module('app').
-  service('classesService', function() {
+  service('classesService', function($rootScope) {
     var dictionary = {
       wizard: {
         name: 'wizard',
@@ -47,6 +47,8 @@ angular.
     this.refreshClass = function() {
       this.currentClass = this.items[this.classIndex];
       sessionStorage.setItem('classIndex', this.classIndex);
+
+      $rootScope.$broadcast("classChanged", this.currentClass);
     };
 
     var sessionStorageClassIndex = parseInt(sessionStorage.getItem('classIndex'));

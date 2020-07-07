@@ -4,30 +4,30 @@
 			<div class="card-header d-none d-xl-block">{{'equipment' | translate}}</div>
 			<div class="card-body">
 				<ul class="list-inline square-ul mb-0">
-					<li id="head" class="slot square align-middle" type="eqpt-head"></li>
+					<li id="head" class="slot square align-middle" type="head"></li>
 				</ul>
 				<ul class="list-inline square-ul mb-0 half">
-					<li id="left-shoulder" class="list-inline-item slot square align-middle" type="eqpt-shoulder"></li>
-					<li id="neck" class="list-inline-item slot square align-middle" type="eqpt-neck"></li>
-					<li id="right-shoulder" class="list-inline-item slot square align-middle" type="eqpt-shoulder"></li>
+					<li id="left-shoulder" class="list-inline-item slot square align-middle" type="shoulder"></li>
+					<li id="neck" class="list-inline-item slot square align-middle" type="neck"></li>
+					<li id="right-shoulder" class="list-inline-item slot square align-middle" type="shoulder"></li>
 				</ul>
 				<ul class="list-inline square-ul mb-0">
-					<li id="left-arm" class="list-inline-item slot square align-middle" type="eqpt-arm"></li>
-					<li id="armor" class="list-inline-item slot square align-middle" type="eqpt-armor"></li>
-					<li id="right-arm" class="list-inline-item slot square align-middle" type="eqpt-arm"></li>
+					<li id="left-arm" class="list-inline-item slot square align-middle" type="arm"></li>
+					<li id="torso" class="list-inline-item slot square align-middle" type="armor"></li>
+					<li id="right-arm" class="list-inline-item slot square align-middle" type="arm"></li>
 				</ul>
 				<ul class="list-inline square-ul mb-0">
-					<li id="left-hand" class="list-inline-item slot square align-middle" type="eqpt-hand"></li>
-					<li id="belt" class="list-inline-item slot square align-middle half" type="eqpt-belt"></li>
-					<li id="right-hand" class="list-inline-item slot square align-middle" type="eqpt-hand"></li>
+					<li id="left-hand" class="list-inline-item slot square align-middle" type="hand"></li>
+					<li id="belly" class="list-inline-item slot square align-middle half" type="belt"></li>
+					<li id="right-hand" class="list-inline-item slot square align-middle" type="hand"></li>
 				</ul>
 				<ul class="list-inline square-ul mb-0">
-					<li id="left-leg" class="list-inline-item slot square align-middle" type="eqpt-legs"></li>
-					<li id="right-leg" class="list-inline-item slot square align-middle" type="eqpt-legs"></li>				
+					<li id="left-leg" class="list-inline-item slot square align-middle" type="legs"></li>
+					<li id="right-leg" class="list-inline-item slot square align-middle" type="legs"></li>				
 				</ul>
 				<ul class="list-inline square-ul mb-0">
-					<li id="left-foot" class="list-inline-item slot square align-middle" type="eqpt-feet"></li>
-					<li id="right-foot" class="list-inline-item slot square align-middle" type="eqpt-feet"></li>
+					<li id="left-foot" class="list-inline-item slot square align-middle" type="feet"></li>
+					<li id="right-foot" class="list-inline-item slot square align-middle" type="feet"></li>
 				</ul>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 							ng-attr-classes="{{item.classes.join(' ')}}"
 							ng-src="img/items/{{item.name}}.png"
 							data-toggle="tooltip" data-html="true" data-placement="top"
-							title="{{itemsService.tooltip(item)}}"
+							data-original-title="{{itemsService.tooltip(item)}}"
 						/>
 					</li>
 				</ul>
@@ -67,13 +67,13 @@
 			<div class="card-body pt-0">
 				<div class="row">
 					<div class="col-4 col-sm-3 col-xl-2" ng-repeat="stat in statsService.stats">
-						<h6 data-toggle="tooltip" data-html="true" data-placement="top" title="{{statsService.tooltip(stat)}}">
+						<h6 data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{{statsService.tooltip(stat)}}">
 							<img class="square transparent small align-baseline" ng-src="img/stats/{{stat}}.png"/>
 							<span class="d-sm-block">{{equippedTotal[stat]}}/{{statTotal(stat)}}</span>
 						</h6>
 						<ul class="list-inline square-ul">
 							<li class="list-inline-item" ng-repeat="item in statItems(stat)">
-								<img class="square" ng-class="item.equipped ? '' : 'grayed'" ng-src="img/items/{{item.name}}.png" data-toggle="tooltip" data-html="true" data-placement="top" title="{{itemsService.tooltip(item)}}" />
+								<img class="square" ng-class="item.equipped ? '' : 'grayed'" ng-src="img/items/{{item.name}}.png" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{{itemsService.tooltip(item)}}" />
 							</li>
 						</ul>
 					</div>

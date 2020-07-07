@@ -22,7 +22,7 @@
 							</label>
 						</span>
 						<span ng-if="!citiesService.isPreviousCity()">
-							<label class="float-left btn btn-primary disabled" data-toggle="tooltip" data-placement="bottom" title="{{'cities.first' | translate}}">
+							<label class="float-left btn btn-primary disabled" data-toggle="tooltip" data-placement="bottom" data-original-title="{{'cities.first' | translate}}">
 								<span class="fas fa-angle-left"></span>
 							</label>
 						</span>
@@ -33,7 +33,7 @@
 							</label>
 						</span>
 						<span ng-if="!citiesService.isNextCity()">
-							<label class="float-right btn btn-primary disabled" data-toggle="tooltip" data-placement="bottom" title="{{'cities.last' | translate}}">
+							<label class="float-right btn btn-primary disabled" data-toggle="tooltip" data-placement="bottom" data-original-title="{{'cities.last' | translate}}">
 								<span class="fas fa-angle-right"></span>
 							</label>
 						</span>
@@ -49,7 +49,7 @@
 						<h6 class="d-lg-none mt-5">{{'talents' | translate}}</h6>
 
 						<ul class="list-inline mt-lg-5 square-ul">
-							<li class="list-inline-item align-middle" ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" title="{{talentsService.tooltip(talent)}}">
+							<li class="list-inline-item align-middle" ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{{talentsService.tooltip(talent)}}">
 								<img class="square" ng-class="talent.disabled ? 'grayed' : ''" ng-src="img/items/{{talent.icon}}.png" />
 							</li>
 						</ul>
@@ -58,7 +58,7 @@
 									<h6>{{'talents' | translate}}</h6>
 
 									<ul id="origin-talents">
-										<li ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" title="{{talentsService.tooltip(talent)}}"><span ng-class="talent.disabled ? 'grayed' : ''">{{talent.name}}</span></li>
+										<li ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{{talentsService.tooltip(talent)}}"><span ng-class="talent.disabled ? 'grayed' : ''">{{talent.name}}</span></li>
 									</ul>
 						</div>
 					</div>

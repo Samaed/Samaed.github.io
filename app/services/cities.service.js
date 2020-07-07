@@ -1,6 +1,6 @@
 angular.
   module('app').
-  service('citiesService', function() {
+  service('citiesService', function($rootScope) {
     this.cities = [
       {
         name: "lille",
@@ -47,6 +47,8 @@ angular.
     this.refreshCity = function() {
       this.currentCity = this.cities[this.cityIndex];
       sessionStorage.setItem('cityIndex', this.cityIndex);
+
+      $rootScope.$broadcast("cityChanged", this.currentCity);
     };
 
 

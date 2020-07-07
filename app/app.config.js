@@ -22,25 +22,9 @@ angular.
     .useSanitizeValueStrategy('sanitizeParameters')
     .determinePreferredLanguage()
   }]).
-  controller('controller', function($window, $scope, $rootScope, $translate, citiesService) {
+  controller('controller', function($window, $scope, translateService, citiesService) {
     $scope.citiesService = citiesService;
-
-    $rootScope.changeLanguage = function(key) {
-      $rootScope.lang = key;
-      $rootScope.otherLangs = $translate.getAvailableLanguageKeys().slice(0);
-      $rootScope.otherLangs.splice($rootScope.otherLangs.indexOf($rootScope.lang), 1);
-      $translate.use(key);
-      sessionStorage.setItem('lang', key);
-
-      // TODO: Update the tooltip content when changing the language
-    };
-
-    var sessionStorageLang = sessionStorage.getItem('lang');
-    if (!sessionStorageLang || $translate.getAvailableLanguageKeys().indexOf(sessionStorageLang) == -1)
-      $rootScope.changeLanguage($translate.proposedLanguage());
-    else
-      $rootScope.changeLanguage(sessionStorageLang);
-
+    
     $('body').tooltip({
       selector: '[data-toggle="tooltip"]'
     });

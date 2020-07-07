@@ -4,7 +4,7 @@ angular.
     var dictionary = {
       sword: {
         name: 'sword',
-        type: 'eqpt-one-handed',
+        type: 'one-handed',
         classes: ['knight'],
         effects: {
           attack: 2,
@@ -12,7 +12,7 @@ angular.
       },
       bow: {
         name: 'bow',
-        type: 'eqpt-two-handed',
+        type: 'two-handed',
         classes: ['archer'],
         effects: {
           attack: 1,
@@ -21,7 +21,7 @@ angular.
       },
       book: {
         name: 'book',
-        type: 'eqpt-one-handed',
+        type: 'one-handed',
         classes: ['wizard'],
         effects: {
           magic: 2
@@ -29,7 +29,7 @@ angular.
       },
       armor: {
         name: 'armor',
-        type: 'eqpt-armored',
+        type: 'armored',
         classes: ['archer','knight'],
         effects: {
           armor: 2,
@@ -37,7 +37,7 @@ angular.
       },
       cloaks: {
         name: 'cloaks',
-        type: 'eqpt-armored',
+        type: 'armored',
         classes: ['wizard'],
         effects: {
           magic: 1,
@@ -46,7 +46,7 @@ angular.
       },
       helmets: {
         name: 'helmets',
-        type: 'eqpt-headed',
+        type: 'headed',
         classes: [],
         effects: {
           armor: 1,
@@ -55,7 +55,7 @@ angular.
       },
       shield: {
         name: 'shield',
-        type: 'eqpt-one-handed',
+        type: 'one-handed',
         classes: ['knight'],
         effects: {
           armor: 1,
@@ -63,7 +63,7 @@ angular.
       },
       boots: {
         name: 'boots',
-        type: 'eqpt-feeted',
+        type: 'feeted',
         classes: [],
         effects: {
           movementspd: 2,
@@ -71,7 +71,7 @@ angular.
       },
       bracers: {
         name: 'bracers',
-        type: 'eqpt-armed',
+        type: 'armed',
         classes: [],
         effects: {
           armor: 1
@@ -79,7 +79,7 @@ angular.
       },
       pants: {
         name: 'pants',
-        type: 'eqpt-legged',
+        type: 'legged',
         classes: [],
         effects: {
           armor: 1
@@ -87,7 +87,7 @@ angular.
       },
       belts: {
         name: 'belts',
-        type: 'eqpt-belted',
+        type: 'belted',
         classes: [],
         effects: {
           movementspd: 1
@@ -95,7 +95,7 @@ angular.
       },
       gloves: {
         name: 'gloves',
-        type: 'eqpt-one-handed',
+        type: 'one-handed',
         classes: ['wizard'],
         effects: {
           magic: 1
@@ -104,29 +104,29 @@ angular.
     }
 
     this.equipmentMapping = {
-      'eqpt-one-handed': 'eqpt-hand',
-      'eqpt-two-handed': 'eqpt-hand',
-      'eqpt-armored': 'eqpt-armor',
-      'eqpt-armed': 'eqpt-arm',
-      'eqpt-belted': 'eqpt-belt',
-      'eqpt-two-armed': 'eqpt-arm',
-      'eqpt-feeted': 'eqpt-feet',
-      'eqpt-headed': 'eqpt-head',
-      'eqpt-legged': 'eqpt-legs',
-      'eqpt-necked': 'eqpt-neck',
-      'eqpt-shouldered': 'eqpt-shoulder'
+      'one-handed': 'hand',
+      'two-handed': 'hand',
+      'armored': 'armor',
+      'armed': 'arm',
+      'belted': 'belt',
+      'two-armed': 'arm',
+      'feeted': 'feet',
+      'headed': 'head',
+      'legged': 'legs',
+      'necked': 'neck',
+      'shouldered': 'shoulder'
     };
     
     this.reverseEquipmentMapping = {
-      'eqpt-hand': ['eqpt-one-handed', 'eqpt-two-handed'],
-      'eqpt-armor': ['eqpt-armored'],
-      'eqpt-arm': ['eqpt-armed', 'eqpt-two-armed'],
-      'eqpt-belt': ['eqpt-belted'],
-      'eqpt-feet': ['eqpt-feeted'],
-      'eqpt-head': ['eqpt-headed'],
-      'eqpt-legs': ['eqpt-legged'],
-      'eqpt-neck': ['eqpt-necked'],
-      'eqpt-shoulder': ['eqpt-shouldered']
+      'hand': ['one-handed', 'two-handed'],
+      'armor': ['armored'],
+      'arm': ['armed', 'two-armed'],
+      'belt': ['belted'],
+      'feet': ['feeted'],
+      'head': ['headed'],
+      'legs': ['legged'],
+      'neck': ['necked'],
+      'shoulder': ['shouldered']
     };
 
     this.items = Object.values(dictionary);

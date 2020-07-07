@@ -7,8 +7,7 @@ angular.
         $scope.statsService = statsService;
         $scope.equippedTotal = {};
 
-        // TODO: Set default gear based on class
-        // TODO: On class change, unequip everything that is not compatible
+        var freeInventorySlotSelector = '#inventory .slot:not(:has(*))';
 
         var equipment = [];
 
@@ -27,31 +26,20 @@ angular.
             }
         }
 
-        $scope.statTotal = function(name) {
-            return total[name];
-        };
-
-        $scope.statItems = function(name) {
-            return itemsByStat[name];
-        }
+        $scope.statTotal = function(name) { return total[name]; };
+        $scope.statItems = function(name) { return itemsByStat[name]; }
 
         $scope.isEquippable = function(item) {
             return item.classes.length == 0 || item.classes.indexOf(classesService.currentClass.name) != -1;
         }
 
-        var getDraggableItemId = function(draggable) {
-            return draggable.attr('id');
-        }
+        var getEquippedDraggable = function(item) { return $($("#equipment #"+item.name)[0]); }
+        var getFreeInventorySlot = function() { return $($(freeInventorySlotSelector)[0]); }
+        var getDraggableItemId = function(draggable) { return draggable.attr('id'); }
+        var equip = function(slot, draggable) { updateEquip(slot, draggable, true); }
+        var unequip = function(slot, draggable, noApply) { updateEquip(slot, draggable, false, noApply); }
 
-        var equip = function(slot, draggable) {
-            updateEquip(slot, draggable, true);
-        }
-
-        var unequip = function(slot, draggable) {
-            updateEquip(slot, draggable, false);
-        }
-
-        var updateEquip = function(slot, draggable, add) {
+        var updateEquip = function(slot, draggable, add, noApply) {
             // TODO: Add cases with two-handed and feeted to remove the other one and move it back to the inventory
             var id = getDraggableItemId(draggable);
             var index = equipment.indexOf(id);
@@ -72,8 +60,22 @@ angular.
             for (const effect in item.effects) {
                 $scope.equippedTotal[effect] += (add ? 1 : -1) * item.effects[effect];
             }
-            $scope.$apply();
+            if (!noApply) $scope.$apply();
         }
+
+        var unequipIncompatibleStuff = function(evt, data) {
+            let index = 0;
+            while (index < equipment.length) {
+                var item = itemsService.byName(equipment[index]);
+                if (!$scope.isEquippable(item)) {
+                    var slot = getFreeInventorySlot();
+                    var draggable = getEquippedDraggable(item);
+                    unequip(slot, draggable, true);
+                } else {
+                    index++;
+                }
+            }
+        };
 
         $(window).ready(function() {
 
@@ -105,7 +107,7 @@ angular.
 
             for (const stat in itemsService.equipmentMapping) {
                 const slotType = itemsService.equipmentMapping[stat];
-                const selector = '#equipment .slot[type="'+slotType+'"]:not(:has(*)), #inventory .slot:not(:has(*))';
+                const selector = '#equipment .slot[type="'+slotType+'"]:not(:has(*)), '+freeInventorySlotSelector;
 
                 $('[type='+stat+']').draggable({
                     revert: 'invalid',
@@ -124,5 +126,7 @@ angular.
                 });
             }
         });
+
+        $scope.$on("classChanged", unequipIncompatibleStuff);
     }
   });
