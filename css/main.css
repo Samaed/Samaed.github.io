@@ -226,6 +226,16 @@ ul#origin-talents {
 	min-height: 700px;
 }
 
+#language {
+	right: 0;
+	left: auto;
+}
+
+#socials {
+	left: 0;
+	right: auto;
+}
+
 #language > button::after, #socials > button::after {
 	display: none;
 }

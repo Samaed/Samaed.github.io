@@ -11,78 +11,78 @@
 	"achievements": "Achievements",
 	"items": {
 		"sword": {
-			"title": "A Mighty Sword",
-			"description": "No knight goes out without his sword."
+			"title": "Sharp Sword",
+			"description": "Slain the (Co)routines with this (C)Sharp sword"
 		},
 		"bow": {
-			"title": "A Mighty Bow",
-			"description": "An archer might use one."
+			"title": "Ruby Bow",
+			"description": "A bow engraved with Ruby (on Rails)"
 		},
 		"book": {
-			"title": "A Mighty Book",
-			"description": "A wizard's best friend."
+			"title": "Reactive Angulared Mighty Book",
+			"description": "A web wizard's best friend"
 		},
 		"armor": {
-			"title": "A Mighty Armor",
-			"description": "The Mighty!!!!!!!!!"
+			"title": "Light Adaptative Polymorphic Armor",
+			"description": "Face the danger with ever-changing strategies"
 		},
 		"cloaks": {
-			"title": "Mighty Cloaks",
-			"description": "The Mighty!!!!!!!!"
+			"title": "Interconnection ShAPIng Cloaks",
+			"description": "Build the connections between worlds through APIs"
 		},
 		"helmets": {
-			"title": "A Mighty Helmet",
-			"description": "The Mighty!!!!!!!"
+			"title": "Long-Time Hand-Forged Helmet",
+			"description": "Keep yourself cool-headed no matter the challenge"
 		},
 		"shield": {
-			"title": "A Mighty Shield",
-			"description": "The Mighty!!!!!!"
+			"title": "Shield++",
+			"description": "Protect yourself with this Unreal (Engine) Shield(C)++ robustness"
 		},
 		"boots": {
-			"title": "Mighty Boots",
-			"description": "The Mighty!!!!!"
+			"title": "Comfy Developed Boots",
+			"description": "Ideal to step on new development grounds"
 		},
 		"bracers": {
-			"title": "Mighty Bracers",
-			"description": "The Mighty!!!!"
+			"title": "Ergonomic Bracers",
+			"description": "Protect your carpal tunnel from the tension"
 		},
 		"pants": {
 			"title": "Mighty Pants",
 			"description": "The Mighty!!!"
 		},
 		"belts": {
-			"title": "A Mighty Belt",
-			"description": "The Mighty!!"
+			"title": "Multitool Belt",
+			"description": "Stores universal tools for various projects"
 		},
 		"gloves": {
-			"title": "Some Mighty Gloves",
-			"description": "The Mighty!"
+			"title": "Stacked overflowing Gloves",
+			"description": "Stores tricks from years of common sharing"
 		}
 	},
 	"stats": {
 		"attack": {
-			"title": "Attack",
-			"description": "ATTACKKKKKK"
+			"title": "Efficiency",
+			"description": "How efficient your code is"
 		},
 		"magic": {
-			"title": "Magic",
-			"description": "Magic? For real?"
+			"title": "Trickery",
+			"description": "How much magic tricks you have in your sleeves"
 		},
 		"armor": {
-			"title": "Armor",
-			"description": "ARMOR."
+			"title": "Resistance",
+			"description": "How bug-resistant your code is"
 		},
 		"cooldown": {
-			"title": "Cooldown",
-			"description": "Never late!"
+			"title": "Fast-Thinking",
+			"description": "How fast you design and code"
 		},
 		"range": {
 			"title": "Range",
-			"description": "Look forward"
+			"description": "How far you look at"
 		},
 		"movementspd": {
-			"title": "Movement speed",
-			"description": "Evolve fast"
+			"title": "Adaptation",
+			"description": "How fast you adapt to changes"
 		}
 	},
 	"classes": {
@@ -114,5 +114,62 @@
         	"title": "Sherbrooke, Québec",
         	"description": "Finally, your true love pursued a thesis in Sherbrooke, so you challenged yourself to do the same. Nice to see you again, Québec."
 		}
+	},
+	"talents": {
+		"birth": {
+			"title": "You are born!",
+			"description": "1992/07/20",
+			"effect": "Max Health +100"
+		},
+		"bsc": {
+			"title": "Bachelor of Science",
+			"description": "ISEN 2010/2013",
+			"effect": "Computer Science +3"
+		},
+		"msc": {
+			"title": "Master of Science",
+			"description": "ISEN 2013/2016",
+			"effect": "Computer Science +2 (5)"
+		},
+		"promoisen": {
+			"title": "Promotion Major",
+			"description": "15.81/20",
+			"effect": "Grant Charisma +1"
+		},
+		"maitrise": {
+			"title": "Maîtrise of Science",
+			"description": "UQAC 2014/2015",
+			"effect": "Computer Science +1 (6)"
+		},
+		"promouqac": {
+			"title": "Promotion Major",
+			"effect": "Grant Charisma +1 (2)",
+			"description": "4.18/4.3"
+	    },
+	    "phd": {
+	        "title": "Doctor of Philosophy?",
+	        "effect": "Computer Science +3 (9)<br/>Unity +3 (3.5)<br/>Artificial Intelligence +3",
+	        "description": "USherbrooke 2018/April 2021"
+    	},
+    	"bcom": {
+    		"title": "Software Engineer @ B-Com",
+    		"effect": "Unreal Engine +0.25 (0.75)<br/>Software Engineer +0.5<br/>Unity +0.5",
+    		"description": "January-June 2016"
+    	},
+    	"ifremer": {
+    		"title": "Software Architect @ Ifremer",
+    		"effect":" Software Engineer +0.5 (1)",
+    		"description": "June-October 2016"
+    	},
+    	"assistant": {
+    		"title": "Research Assistant",
+			"effect": "Unreal Engine +0.5",
+			"description": "June-December 2015"
+    	},
+    	"tymate": {
+    		"title": "Backend Engineer @ Tymate",
+    		"effect": "Software Engineer +1 (2)",
+    		"description": "November 2016-February 2018"
+    	}
 	}
 }

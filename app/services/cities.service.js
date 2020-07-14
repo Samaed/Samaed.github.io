@@ -8,15 +8,15 @@ angular.
       },
       {
         name: "chicoutimi",
-        talents: ["maitrise","promouqac"]
+        talents: ["maitrise","promouqac","assistant"]
       },
       {
         name: "rennes",
-        talents: []
+        talents: ["bcom", "ifremer"]
       },
       {
         name: "boisblancs",
-        talents: []
+        talents: ["tymate"]
       },
       {
         name: "sherbrooke",

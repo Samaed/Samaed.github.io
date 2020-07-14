@@ -1,31 +1,35 @@
 angular.
   module('app').
-  service('itemsService', function(statsService, translateFilter) {
+  service('itemsService', function(translateFilter) {
     var dictionary = {
       sword: {
         name: 'sword',
-        type: 'one-handed',
+        type: 'handed',
         classes: ['knight'],
         effects: {
-          attack: 2,
-        }
+          attack: 3,
+        },
+        logos: ['unity', 'csharp']
       },
       bow: {
         name: 'bow',
-        type: 'two-handed',
+        type: 'handed',
         classes: ['archer'],
         effects: {
           attack: 1,
           range: 2,
-        }
+        },
+        logos: ['ruby']
       },
       book: {
         name: 'book',
-        type: 'one-handed',
+        type: 'handed',
         classes: ['wizard'],
         effects: {
-          magic: 2
-        }
+          magic: 2,
+          range: 1
+        },
+        logos: ['angular','react']
       },
       armor: {
         name: 'armor',
@@ -33,6 +37,7 @@ angular.
         classes: ['archer','knight'],
         effects: {
           armor: 2,
+          movementspd: 1
         }
       },
       cloaks: {
@@ -40,7 +45,7 @@ angular.
         type: 'armored',
         classes: ['wizard'],
         effects: {
-          magic: 1,
+          magic: 2,
           cooldown: 1
         }
       },
@@ -55,11 +60,12 @@ angular.
       },
       shield: {
         name: 'shield',
-        type: 'one-handed',
+        type: 'handed',
         classes: ['knight'],
         effects: {
-          armor: 1,
-        }
+          armor: 2,
+        },
+        logos: ['unreal','cpp']
       },
       boots: {
         name: 'boots',
@@ -74,7 +80,8 @@ angular.
         type: 'armed',
         classes: [],
         effects: {
-          armor: 1
+          armor: 1,
+          attack: 1
         }
       },
       pants: {
@@ -82,7 +89,8 @@ angular.
         type: 'legged',
         classes: [],
         effects: {
-          armor: 1
+          movementspd: 1,
+          cooldown: 1
         } 
       },
       belts: {
@@ -90,26 +98,28 @@ angular.
         type: 'belted',
         classes: [],
         effects: {
-          movementspd: 1
-        }
+          movementspd: 1,
+          cooldown: 1
+        },
+        half: true
       },
       gloves: {
         name: 'gloves',
-        type: 'one-handed',
+        type: 'handed',
         classes: ['wizard'],
         effects: {
-          magic: 1
-        }
+          magic: 1,
+          range: 1
+        },
+        logos: ['so']
       }
     }
 
     this.equipmentMapping = {
-      'one-handed': 'hand',
-      'two-handed': 'hand',
+      'handed': 'hand',
       'armored': 'armor',
       'armed': 'arm',
       'belted': 'belt',
-      'two-armed': 'arm',
       'feeted': 'feet',
       'headed': 'head',
       'legged': 'legs',
@@ -118,15 +128,15 @@ angular.
     };
     
     this.reverseEquipmentMapping = {
-      'hand': ['one-handed', 'two-handed'],
-      'armor': ['armored'],
-      'arm': ['armed', 'two-armed'],
-      'belt': ['belted'],
-      'feet': ['feeted'],
-      'head': ['headed'],
-      'legs': ['legged'],
-      'neck': ['necked'],
-      'shoulder': ['shouldered']
+      'hand': 'handed',
+      'armor': 'armored',
+      'arm': 'armed',
+      'belt': 'belted',
+      'feet': 'feeted',
+      'head': 'headed',
+      'legs': 'legged',
+      'neck': 'necked',
+      'shoulder': 'shouldered'
     };
 
     this.items = Object.values(dictionary);

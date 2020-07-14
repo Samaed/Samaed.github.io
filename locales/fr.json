@@ -11,78 +11,78 @@
 	"achievements": "Accomplissements",
 	"items": {
 		"sword": {
-			"title": "Une épée!",
-			"description": "No knight goes out without his sword."
+			"title": "Épée tranchante",
+			"description": "Maitrisez les coroutines (Unity) avec cette épée tranchante (C#)"
 		},
 		"bow": {
-			"title": "A Mighty Bow",
-			"description": "An archer might use one."
+			"title": "Arc orné de Ruby",
+			"description": "Un arc orné de Ruby (on Rails)"
 		},
 		"book": {
-			"title": "A Mighty Book",
-			"description": "A wizard's best friend."
+			"title": "Livre Réactif Angulaire Sacré",
+			"description": "Le meilleur ami d'un sorcier du web"
 		},
 		"armor": {
-			"title": "A Mighty Armor",
-			"description": "The Mighty!!!!!!!!!"
+			"title": "Armure polymorphe adaptative légère",
+			"description": "Affrontez le danger avec des stratégies évolutives"
 		},
 		"cloaks": {
-			"title": "Mighty Cloaks",
-			"description": "The Mighty!!!!!!!!"
+			"title": "Cape tAPIssée interconnectée",
+			"description": "Construisez des connexions entre les mondes aux travers d'APIs"
 		},
 		"helmets": {
-			"title": "A Mighty Helmet",
-			"description": "The Mighty!!!!!!!"
+			"title": "Casque longuement poli à la main",
+			"description": "Gardez la tête froid peu importe le défi"
 		},
 		"shield": {
-			"title": "A Mighty Shield",
-			"description": "The Mighty!!!!!!"
+			"title": "Bou(C)lier++",
+			"description": "Protégez vous avec ce robuste Bou(C)lier(++) surréaliste (Unreal Engine)"
 		},
 		"boots": {
-			"title": "Mighty Boots",
-			"description": "The Mighty!!!!!"
+			"title": "Bottes confortables",
+			"description": "Idéales pour explorer de nouveaux terrains"
 		},
 		"bracers": {
-			"title": "Mighty Bracers",
-			"description": "The Mighty!!!!"
+			"title": "Brassards Ergonomiques",
+			"description": "Protégez votre tunnel carpien de la tension"
 		},
 		"pants": {
 			"title": "Mighty Pants",
 			"description": "The Mighty!!!"
 		},
 		"belts": {
-			"title": "A Mighty Belt",
-			"description": "The Mighty!!"
+			"title": "Ceinture porte-outils",
+			"description": "Contient des outils universels pour divers projets"
 		},
 		"gloves": {
-			"title": "Some Mighty Gloves",
-			"description": "The Mighty!"
+			"title": "Gants à débordement de pile",
+			"description": "Contient des années d'astuces partagées par la communauté (Stack-Overflow)"
 		}
 	},
 	"stats": {
 		"attack": {
-			"title": "Attack",
-			"description": "ATTACKKKKKK"
+			"title": "Efficience",
+			"description": "À quel point votre code est efficient"
 		},
 		"magic": {
-			"title": "Magic",
-			"description": "Magic? For real?"
+			"title": "Astuce",
+			"description": "Combien d'astuces vous gardez dans vos manches"
 		},
 		"armor": {
-			"title": "Armor",
-			"description": "ARMOR."
+			"title": "Résistance",
+			"description": "Combien votre code est résistant aux erreurs"
 		},
 		"cooldown": {
-			"title": "Cooldown",
-			"description": "Never late!"
+			"title": "Habileté",
+			"description": "À quel point vous concevez et implémentez rapidement"
 		},
 		"range": {
-			"title": "Range",
-			"description": "Look forward"
+			"title": "Portée",
+			"description": "Jusqu'à quelle distance vous vous projetez"
 		},
 		"movementspd": {
-			"title": "Movement speed",
-			"description": "Evolve fast"
+			"title": "Adaptation",
+			"description": "À quelle vitesse vous vous adaptez au changement"
 		}
 	},
 	"classes": {
@@ -114,5 +114,62 @@
         	"title": "Sherbrooke, Québec",
         	"description": "Finalement, votre grand amour a entrepris une thèse à Sherbrooke, donc vous vous êtes mis au défi d'en faire de même. Heureux de te retrouver, Québec."
 		}
+	},
+	"talents": {
+		"birth": {
+			"title": "Vous êtes né!",
+			"description": "20/07/1992",
+			"effect": "PV max +100"
+		},
+		"bsc": {
+			"title": "Bachelor en Science",
+			"description": "ISEN 2010/2013",
+			"effect": "Informatique +3"
+		},
+		"msc": {
+			"title": "Master en Science",
+			"description": "ISEN 2013/2016",
+			"effect": "Informatique +2 (5)"
+		},
+		"promoisen": {
+			"title": "Major de promotion",
+			"description": "15,81/20",
+			"effect": "Charisme pour les bourses +1"
+		},
+		"maitrise": {
+			"title": "Maîtrise en Science",
+			"description": "UQAC 2014/2015",
+			"effect": "Informatique +1 (6)"
+		},
+		"promouqac": {
+			"title": "Major de promotion",
+			"description": "4,18/4,3",
+			"effect": "Charisme pour les bourses +1 (2)"
+	    },
+	    "phd": {
+	        "title": "Doctor en Philosophie?",
+	        "effect": "Informatique +3 (9)",
+	        "description": "USherbrooke 2018/Avril 2021"
+    	},
+    	"bcom": {
+    		"title": "Ingénieur Logiciel @ B-Com",
+    		"effect": "Unreal Engine +0.25 (0.75)<br/>Ingénieur Logiciel +0.5<br/>Unity +0.5",
+    		"description": "Janvier-Juin 2016"
+    	},
+    	"ifremer": {
+    		"title": "Architecte Logiciel @ Ifremer",
+    		"effect":" Ingénieur Logiciel +0.5 (1)",
+    		"description": "Juin-Octobre 2016"
+    	},
+    	"assistant": {
+    		"title": "Assistant de recherche",
+			"effect": "Unreal Engine +0.5",
+			"description": "Juin-Décembre 2015"
+    	},
+    	"tymate": {
+    		"title": "Ingénieur Backend @ Tymate",
+    		"effect": "Ingénieur Logiciel +1 (2)",
+    		"description": "Novembre 2016-Février 2018"
+    	}
 	}
 }

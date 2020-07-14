@@ -58,7 +58,7 @@
 									<h6>{{'talents' | translate}}</h6>
 
 									<ul id="origin-talents">
-										<li ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{{talentsService.tooltip(talent)}}"><span ng-class="talent.disabled ? 'grayed' : ''">{{talent.name}}</span></li>
+										<li ng-repeat="talentName in citiesService.currentCity.talents" ng-init="talent = talentsService.byName(talentName)" data-toggle="tooltip" data-html="true" data-placement="top" data-original-title="{{talentsService.tooltip(talent)}}"><span ng-class="talent.disabled ? 'grayed' : ''">{{'talents.'+talent.name+'.title' | translate}}</span></li>
 									</ul>
 						</div>
 					</div>

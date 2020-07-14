@@ -1,56 +1,51 @@
 angular.
   module('app').
-  service('talentsService', function() {
+  service('talentsService', function(translateFilter) {
     var dictionary = {
       "birth": {
         icon: "apple",
-        name: "You are born!",
-        title: "Birth",
-        effects: "Max HP +100",
-        description: "20/07/1992"
+        name: "birth"
       },
       "bsc": {
         icon: "scroll",
-        name: "BSc in Computer Science",
-        title: "Bachelor of Science",
-        effects: "Computer Science +3",
-        description: "ISEN - 2013"  
+        name: "bsc"
       },
       "msc": {
         icon: "scroll",
-        name: "MSc in Computer Science",
-        title: "Master of Science",
-        effects: "Computer Science +2",
-        description: "ISEN - 2016"
+        name: "msc"
       },
       "promoisen": {
         icon: "gem",
-        name: "Promotion Major",
-        title: "Promotion Major",
-        effects: "Grant Charisma +1",
-        description: "15.81/20"
+        name:"promoisen"
       },
       "maitrise": {
         icon: "scroll",
-        name: "Maîtrise in Computer Science",
-        title: "Maître en Science",
-        effects: "Computer Science +1",
-        description: "UQAC - 2015"
+        name: "maitrise"
       },
       "promouqac": {
         icon: "gem",
-        name: "Promotion Major",
-        title: "Promotion Major",
-        effects: "Grant Charisma +1",
-        description: "4.18/4.3"
+        name: "promouqac"
       },
       "phd": {
         icon: "scroll",
-        name: "PhD in Computer Science?",
-        title: "Doctor of Philosophy",
-        effects: "Computer Science +3",
-        description: "USherbrooke - April 2021",
+        name: "phd",
         disabled: true
+      },
+      "assistant": {
+        icon: "bag",
+        name: "assistant"
+      },
+      "bcom": {
+        icon: "bag",
+        name: "bcom"
+      },
+      "ifremer": {
+        icon: "bag",
+        name: "ifremer"
+      },
+      "tymate": {
+        icon: "bag",
+        name: "tymate"
       }
     };
 
@@ -59,7 +54,10 @@ angular.
     }
 
     this.tooltip = function(talent) {
-      return '<h6 class="text-info">'+talent.title+'</h6><div>'+talent.effects+'</div><div class="text-muted">'+talent.description+'</div>';
+      var html = '<h6 class="text-info">'+translateFilter('talents.'+talent.name+'.title')+'</h6>';
+      html += '<div>'+translateFilter('talents.'+talent.name+'.effect')+'</div>';
+      html += '<div class="text-muted">'+translateFilter('talents.'+talent.name+'.description')+'</div>';
+      return html;
     }
   });
   

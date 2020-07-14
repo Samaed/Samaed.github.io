@@ -5,9 +5,5 @@ angular.
     controller: function($scope, citiesService, talentsService) {
     	$scope.citiesService = citiesService;
     	$scope.talentsService = talentsService;
-
-    	$scope.$on("langChanged", function(evt, data) {
-    		console.log("origin: "+data);
-    	});
     }
   });
