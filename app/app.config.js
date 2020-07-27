@@ -6,8 +6,9 @@ angular.
       template: '<origin></origin>'
     }).when('/equipment', {
       template: '<equipment></equipment>'
-    }).
-    otherwise('/origin');
+    }).when('/achievements', {
+      template: '<achievements></achievements>'
+    }).otherwise('/origin');
 
     $translateProvider
     .useStaticFilesLoader({
@@ -22,7 +23,7 @@ angular.
     .useSanitizeValueStrategy('sanitizeParameters')
     .determinePreferredLanguage()
   }]).
-  controller('controller', function($window, $scope, translateService, citiesService) {
+  controller('controller', function($scope, translateService, citiesService) {
     $scope.citiesService = citiesService;
     
     $('body').tooltip({

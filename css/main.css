@@ -1,12 +1,6 @@
 html {
 	height: 100%;
 	width: 100%;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-    background-position: top;
-    -webkit-transition: background-image 0.2s ease-in-out;
-    transition: background-image 0.2s ease-in-out;
 }
 
 body {
@@ -163,30 +157,49 @@ ul#origin-talents {
 	padding: 0;
 }
 
-.background-lille {
-	background-image: url("../img/backgrounds/lille.jpg")
-}
-
-.background-chicoutimi {
-	background-image: url("../img/backgrounds/chicoutimi.jpg")
-}
-
-.background-rennes {
-	background-image: url("../img/backgrounds/rennes.jpg")
-}
-
-.background-boisblancs {
-	background-image: url("../img/backgrounds/boisblancs.jpg")
-}
-
-.background-sherbrooke {
-	background-image: url("../img/backgrounds/sherbrooke.jpg")
-}
-
-.greyed, .grayed {
+.greyed {
 	opacity: .5;
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
+}
+
+.background::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  -webkit-transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.background-greyed::before {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
+.background.lille::before {
+	background-image: url("../img/backgrounds/lille.jpg")
+}
+
+.background.chicoutimi::before {
+	background-image: url("../img/backgrounds/chicoutimi.jpg")
+}
+
+.background.rennes::before {
+	background-image: url("../img/backgrounds/rennes.jpg")
+}
+
+.background.boisblancs::before {
+	background-image: url("../img/backgrounds/boisblancs.jpg")
+}
+
+.background.sherbrooke {
+	background-image: url("../img/backgrounds/sherbrooke.jpg")
 }
 
 #face.float-left {
@@ -287,4 +300,34 @@ ul#origin-talents {
 
 header .list-group-item.disabled {
 	pointer-events: inherit !important;
+}
+
+#achievements {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url('../img/backgrounds/work.png');
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	padding-top: 234px;
+}
+
+#achievements > div {
+	max-width: 630px;
+	transform: rotateX(-11deg) rotateY(5deg);
+	margin: auto;
+}
+
+#achievements video {
+	width: 100%;
+	border: 5px solid black;
+}
+
+#achievements h3 {
+	color: white;
+	text-shadow: 0px 0px 5px #666;
 }

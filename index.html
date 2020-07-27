@@ -8,7 +8,9 @@ This is more of a side-project for me and for you to enjoy than a technical demo
 Have fun with this website and don't hesitate to contact me if you are interested in talking about anything.
  -->
 <!DOCTYPE html>
-<html class="vfill" data-ng-app="app" ng-class="'background-' + citiesService.currentCity.name" ng-controller="controller">
+<html class="vfill background" data-ng-app="app"
+	ng-class="{[citiesService.currentCity.name]: true,
+				'background-greyed': greybg}" ng-controller="controller">
 <head>
 	<title>Corentin Haidon</title>
 	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon.png">
@@ -64,6 +66,8 @@ Have fun with this website and don't hesitate to contact me if you are intereste
 	<script src="app/origin/origin.component.js"></script>
 	<script src="app/equipment/equipment.module.js"></script>
 	<script src="app/equipment/equipment.component.js"></script>
+	<script src="app/achievements/achievements.module.js"></script>
+	<script src="app/achievements/achievements.component.js"></script>
 	<script src="app/services/cities.service.js"></script>
 	<script src="app/services/classes.service.js"></script>
 	<script src="app/services/talents.service.js"></script>
@@ -71,5 +75,6 @@ Have fun with this website and don't hesitate to contact me if you are intereste
 	<script src="app/services/stats.service.js"></script>
 	<script src="app/services/translate.service.js"></script>
 	<script src="app/services/equipment.service.js"></script>
+	<script src="app/services/achievements.service.js"></script>
 </body>
 </html>

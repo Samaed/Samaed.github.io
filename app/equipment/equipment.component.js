@@ -2,10 +2,11 @@ angular.
   module('equipment').
   component('equipment', {
     templateUrl: '/app/equipment/equipment.component.html',
-    controller: function($scope, classesService, itemsService, statsService, equipmentService) {
+    controller: function($rootScope, $scope, classesService, itemsService, statsService, equipmentService) {
         $scope.itemsService = itemsService;
         $scope.statsService = statsService;
         $scope.equipmentService = equipmentService;
+        $rootScope.greybg = false;
 
         var $equipment = $("#equipment");
 
