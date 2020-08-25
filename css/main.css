@@ -157,7 +157,7 @@ ul#origin-talents {
 	padding: 0;
 }
 
-.greyed {
+.greyed, .grayed {
 	opacity: .5;
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
